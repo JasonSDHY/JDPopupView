@@ -7,6 +7,9 @@
 //
 
 #import "JDPopupWindow.h"
+#import "JDPopupCategory.h"
+#import "JDPopupDefine.h"
+#import "JDPopupView.h"
 
 @interface JDPopupWindow ()
 
@@ -54,19 +57,19 @@
     [self makeKeyAndVisible];
     [[[UIApplication sharedApplication].delegate window] makeKeyWindow];
     
-    self.mm_dimBackgroundView.hidden = YES;
+    self.jd_dimBackgroundView.hidden = YES;
     self.hidden = YES;
 }
 
 - (void)actionTap:(UITapGestureRecognizer*)gesture
 {
-    if ( self.touchWildToHide && !self.mm_dimBackgroundAnimating )
+    if ( self.touchWildToHide && !self.jd_dimBackgroundAnimating )
     {
-        for ( UIView *v in self.mm_dimBackgroundView.subviews )
+        for ( UIView *v in self.jd_dimBackgroundView.subviews )
         {
-            if ( [v isKindOfClass:[MMPopupView class]] )
+            if ( [v isKindOfClass:[JDPopupView class]] )
             {
-                MMPopupView *popupView = (MMPopupView*)v;
+                JDPopupView *popupView = (JDPopupView*)v;
                 [popupView hide];
             }
         }
