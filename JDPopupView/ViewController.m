@@ -25,8 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[JDPopupWindow sharedWindow]cacheWindow];
-    [JDPopupWindow sharedWindow].touchWildToHide = YES;
+//    [[JDPopupWindow sharedWindow]cacheWindow];
+//    [JDPopupWindow sharedWindow].touchWildToHide = YES;
     
 
     UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
@@ -44,22 +44,22 @@
 
     NSArray *items =
     @[JDItemMake(@"Done", JDItemTypeNormal, block),
-      JDItemMake(@"Save", JDItemTypeHighlight, block),
+//      JDItemMake(@"Save", JDItemTypeHighlight, block),
       JDItemMake(@"Cancel", JDItemTypeDisabled, block)
       ];
     
-//    JDAlertView* alertView= [[JDAlertView alloc] initWithTitle:@"确认取消收藏" detail:@"" items:items ];
+    JDAlertView* alertView= [[JDAlertView alloc] initWithTitle:@"确认取消收藏" detail:@"" items:items ];
     
 //    JDAlertView* alertView2 = [[JDAlertView alloc]initWithInputTitle:@"jjj" detail:@"lll" placeholder:@"lai啊" handler:^(NSString *text) {    NSLog(@"%@",text);    }];
     
 //    JDSheetView* sheeView = [[ JDSheetView alloc]initWithTitle:@"你在哪啊?~~!" items:items];
     
-    JDTYAlertView* al = [[JDTYAlertView alloc]initWithTitle:@"要收藏?" detail:nil items:items];
-    [al show];
+//    JDTYAlertView* al = [[JDTYAlertView alloc]initWithTitle:@"要收藏?" detail:nil items:items];
+//    [al show];
     
     
     
-//    [alertView show];
+    [alertView show];
 
 }
 

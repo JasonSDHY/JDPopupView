@@ -28,6 +28,10 @@ typedef NS_ENUM(NSUInteger, JDItemType) {
     JDItemTypeDisabled
 };
 
+
+
+
+
 NS_INLINE JDPopupItem* JDItemMake(NSString* title, JDItemType type, JDPopupItemHandler handler)
 {
     JDPopupItem *item = [JDPopupItem new];
@@ -57,3 +61,4 @@ NS_INLINE JDPopupItem* JDItemMake(NSString* title, JDItemType type, JDPopupItemH
     
     return item;
 }
+

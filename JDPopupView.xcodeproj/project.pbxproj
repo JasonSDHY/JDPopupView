@@ -21,6 +21,7 @@
 		9698CD2F1BFDA4CA002FC079 /* JDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698CD2E1BFDA4CA002FC079 /* JDAlertView.m */; };
 		9698CD351BFDD72E002FC079 /* JDSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698CD341BFDD72E002FC079 /* JDSheetView.m */; };
 		96A916AC1BFF124D002C38CC /* JDTYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A916AB1BFF124D002C38CC /* JDTYAlertView.m */; };
+		96A916AF1BFF1F81002C38CC /* JDTYPopupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A916AE1BFF1F81002C38CC /* JDTYPopupItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		9698CD341BFDD72E002FC079 /* JDSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDSheetView.m; sourceTree = "<group>"; };
 		96A916AA1BFF124D002C38CC /* JDTYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTYAlertView.h; sourceTree = "<group>"; };
 		96A916AB1BFF124D002C38CC /* JDTYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTYAlertView.m; sourceTree = "<group>"; };
+		96A916AD1BFF1F81002C38CC /* JDTYPopupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTYPopupItem.h; sourceTree = "<group>"; };
+		96A916AE1BFF1F81002C38CC /* JDTYPopupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTYPopupItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				9698CD341BFDD72E002FC079 /* JDSheetView.m */,
 				96A916AA1BFF124D002C38CC /* JDTYAlertView.h */,
 				96A916AB1BFF124D002C38CC /* JDTYAlertView.m */,
+				96A916AD1BFF1F81002C38CC /* JDTYPopupItem.h */,
+				96A916AE1BFF1F81002C38CC /* JDTYPopupItem.m */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -274,6 +279,7 @@
 				96A916AC1BFF124D002C38CC /* JDTYAlertView.m in Sources */,
 				9698CD351BFDD72E002FC079 /* JDSheetView.m in Sources */,
 				9698CD2C1BFDA369002FC079 /* JDPopupItem.m in Sources */,
+				96A916AF1BFF1F81002C38CC /* JDTYPopupItem.m in Sources */,
 				9604FD541BFB3FBE007A6E2A /* ViewController.m in Sources */,
 				9604FD691BFB4330007A6E2A /* JDPopupCategory.m in Sources */,
 				9682E8E91BFC8A8D00D4DC84 /* JDPopupView.m in Sources */,

@@ -113,27 +113,29 @@
             UIButton* btn = [UIButton jd_buttonWithTarget:self action:@selector(actionButton:)];
             [self.buttonView addSubview:btn];
             btn.tag = i;
+
             [btn setBackgroundImage:[UIImage jd_imageWithColor:self.backgroundColor] forState:UIControlStateNormal];
             [btn setBackgroundImage:[UIImage jd_imageWithColor:config.itemPressedColor] forState:UIControlStateHighlighted];
             [btn setTitle:item.title forState:UIControlStateNormal];
             [btn setTitleColor:item.highlight?config.itemHighlightColor:config.itemNormalColor forState:UIControlStateNormal];
-            btn.layer.borderWidth = JD_SPLIT_WIDTH;
+            btn.layer.borderWidth = 2;
             btn.layer.borderColor = config.splitColor.CGColor;
             btn.titleLabel.font = (btn==items.lastObject)?[UIFont boldSystemFontOfSize:config.buttonFontSize]:[UIFont systemFontOfSize:config.buttonFontSize];
+            btn.layer.cornerRadius = config.cornerRadius;
             
             
             CGFloat JD_BTN_Margin = 10;
             
-            CGFloat btnW = ( 2 == items.count  ) ? (config.width )*0.5 + JD_SPLIT_WIDTH - 2*JD_BTN_Margin
-            : (config.width + JD_SPLIT_WIDTH - 2*JD_BTN_Margin) ;
+            CGFloat btnW = ( 2 == items.count  ) ? (config.width )*0.5 - 2*JD_BTN_Margin
+            : (config.width  - 2*JD_BTN_Margin) ;
             
-            CGFloat btnH = config.buttonHeight + JD_SPLIT_WIDTH;
+            CGFloat btnH = config.buttonHeight ;
             
-            CGFloat btnX = (1 == i && 2 == items.count ) ? (btnW - JD_SPLIT_WIDTH) + 3*JD_BTN_Margin
+            CGFloat btnX = (1 == i && 2 == items.count ) ? (btnW ) + 3*JD_BTN_Margin
             : JD_BTN_Margin ;
             
-            CGFloat btnY = ((1 == i || 0 == i) && 2 == items.count ) ? JD_SPLIT_WIDTH + JD_BTN_Margin
-            : -JD_SPLIT_WIDTH + i * config.buttonHeight + JD_BTN_Margin;
+            CGFloat btnY = ((1 == i || 0 == i) && 2 == items.count ) ?  + JD_BTN_Margin
+            :  + i * config.buttonHeight + JD_BTN_Margin;
             
             
             btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
@@ -209,6 +211,8 @@
         self.titleFontSize  = 18.0f;
         self.detailFontSize = 14.0f;
         self.buttonFontSize = 17.0f;
+        
+        
         
         self.backgroundColor    = JDHexColor(0xFFFFFFFF);
         self.titleColor         = JDHexColor(0x333333FF);
